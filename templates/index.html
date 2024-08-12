@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <title>  </title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+   </head>
+<body>
+  <nav>
+  <h2>Blogger</h2>
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="/travel">Travel</a></li>
+    <li><a href="/sport">Sports</a></li>
+  </ul>
+</nav><br><br>
+  <div class="row">
+      {% for i in result %}
+ <div class="col-sm-3">
+     <center>
+            <img src="static/images/{{i[4]}}" width="180px" height="180px"><br><br>
+            <h3>{{i[1]}}</h3>
+            <h3>{{i[3]}}</h3>
+           <a href="" class="btn btn-primary">View More</a>
+         </center>
+
+ </div>
+       {% endfor %}
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
